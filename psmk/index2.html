@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ticket Booking</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    .booking-container {
+        background-color: white;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        width: 400px;
+    }
+    .booking-container h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #ff6f3c;
+    }
+    .booking-container label {
+        display: block;
+        margin: 10px 0 5px;
+        font-weight: bold;
+    }
+    .booking-container input,
+    .booking-container select {
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        margin-bottom: 15px;
+    }
+    .booking-container button {
+        width: 100%;
+        padding: 12px;
+        background-color: #ff6f3c;
+        color: white;
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: 0.3s;
+    }
+    .booking-container button:hover {
+        background-color: #ff3b00;
+    }
+</style>
+</head>
+<body>
+
+<div class="booking-container">
+    <h2>Book Your Tickets</h2>
+    <form>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" placeholder="Enter your phone number" required>
+
+        <label for="event">Select Event</label>
+        <select id="event" required>
+            <option value="">--Select an event--</option>
+            <option value="concert">Music Concert</option>
+            <option value="movie">Movie Show</option>
+            <option value="theater">Theater Play</option>
+            <option value="sports">Sports Event</option>
+        </select>
+
+        <label for="tickets">Number of Tickets</label>
+        <input type="number" id="tickets" min="1" max="10" value="1" required>
+
+        <label for="date">Select Date</label>
+        <input type="date" id="date" required>
+
+        <label for="time">Select Time</label>
+        <input type="time" id="time" required>
+
+        <button type="submit">Book Now</button>
+    </form>
+</div>
+
+</body>
+</html>
